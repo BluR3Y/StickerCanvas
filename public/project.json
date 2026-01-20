@@ -1,0 +1,20 @@
+{
+    "title": "Slaps Wallpaper",
+    "description": "A dynamic parallax sticker bomb wallpaper.",
+    "file": "index.html",
+    "general": {
+        "properties": {
+            "backgroundImgFile": {
+                "title": "Custom Background Image",
+                "type": "file",
+                "filetype": "image"
+            },
+            "stickerImgDir": {
+                "title": "Custom Images for Stickers",
+                "type": "directory",
+                "mode": "fetchall",
+                "filetype": "image"
+            }
+        }
+    }
+}

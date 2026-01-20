@@ -1,22 +1,22 @@
 import styled, { css } from "styled-components";
 import type { StickerPositionData } from "./Sticker.types";
 
-const circleStyles = css`
-    border-radius: 50%;
-`;
+// const circleStyles = css`
+//     border-radius: 50%;
+// `;
 
-const ovalStyles = css`
-    aspect-ratio: 2;
-    border-radius: 50%;
-`;
+// const ovalStyles = css`
+//     aspect-ratio: 2;
+//     border-radius: 50%;
+// `;
 
-const triangleStyles = css`
-    width: 0;
-    height: 0;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid red;
-`;
+// const triangleStyles = css`
+//     width: 0;
+//     height: 0;
+//     border-left: 50px solid transparent;
+//     border-right: 50px solid transparent;
+//     border-bottom: 100px solid red;
+// `;
 
 const defaultStyles = css`
     border-radius: 8px;

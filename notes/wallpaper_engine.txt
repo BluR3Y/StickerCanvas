@@ -1,0 +1,30 @@
+{
+  "title": "Sticker Bomb React",
+  "description": "A dynamic parallax sticker bomb wallpaper.",
+  "file": "index.html",
+  "general": {
+    "properties": {
+      "density": {
+        "title": "Sticker Density",
+        "type": "slider",
+        "min": 10,
+        "max": 200,
+        "value": 50
+      },
+      "chaos_mode": {
+        "title": "Chaos Mode (Auto-Drift)",
+        "type": "bool",
+        "value": true
+      },
+      "custom_sticker": {
+        "title": "Import Custom Sticker",
+        "type": "file"
+      },
+      "schemecolor": {
+        "title": "Background Color",
+        "type": "color",
+        "value": "0.1 0.1 0.1"
+      }
+    }
+  }
+}
