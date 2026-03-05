@@ -1,9 +1,11 @@
 import { useState } from "react";
 import { useWallpaperListener } from "./hooks/useWallpaperListener";
+import StickerBomb from "./features/stickerbomb/StickerBomb";
+import defaultBackgroundImg from "./assets/images/graffiti-art.jpg";
 
 
 function App() {
-    const [backgroundUrl, setBackgroundUrl] = useState('');
+    const [backgroundUrl, setBackgroundUrl] = useState(defaultBackgroundImg);
     const [stickerUrls, setStickerUrls] = useState<string[]>([]);
 
     useWallpaperListener({
@@ -16,12 +18,10 @@ function App() {
     });
 
     return (
-        <>
-        <h1>Background URL: {backgroundUrl ? backgroundUrl : "Empty"}</h1>
-        <ul>{stickerUrls.length === 0 ? <li>No Sticker Urls</li> : stickerUrls.map((url, index) => (
-            <li key={index}>{url}</li>
-        ))}</ul>
-        </>
+        <StickerBomb
+            backgroundImage={backgroundUrl}
+            stickerImages={stickerUrls}
+        />
     )
 }
 

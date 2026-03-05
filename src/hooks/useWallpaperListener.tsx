@@ -33,7 +33,7 @@ export function useWallpaperListener({
         // Define Directory Listener
         window.wallpaperPropertyListener.userDirectoryFilesAddedOrChanged = (propertyName, changedFiles) => {
             // Check if this event is for our specific property
-            if (propertyName === 'StickerImgDir' && onStickerDirFilesLoaded) {
+            if (propertyName === 'stickerImgDir' && onStickerDirFilesLoaded) {
                 // Wallpaper Engine returns raw paths like "C:\Images\Img.jpg"
                 // We map them to "file:///C:\Images\Img.jpg"
                 const validUrls = changedFiles.map(file => 'file:///' + file);

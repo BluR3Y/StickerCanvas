@@ -22,8 +22,16 @@ const defaultStyles = css`
     border-radius: 8px;
 `;
 
+const StyledOutline = css`
+    background-color: #fff;
+    padding: 1em;
+    border-radius: 8px;
+    border: 0.15em solid black;
+`;
+
 export const StyledSticker = styled.div<{
     $position?: StickerPositionData;
+    $outline?: boolean;
     $animationDuration: number;
     $hasBakeCB: boolean;
     $isMounted: boolean;
@@ -33,8 +41,8 @@ export const StyledSticker = styled.div<{
     align-items: center;
     justify-content: center;
     will-change: transform;
-    padding: 8px;
-    ${defaultStyles}
+
+    ${({$outline}) => $outline && StyledOutline}
 
     ${({$position, $hasBakeCB, $animationDuration, $isMounted}) => $position && css`
         left: 0;
@@ -46,6 +54,4 @@ export const StyledSticker = styled.div<{
             opacity: ${$isMounted ? 1 : 0};
         `}
     `}
-
-    background-color: red;
 `;

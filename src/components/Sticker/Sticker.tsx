@@ -8,7 +8,7 @@ const Sticker = React.memo<StickerProps>(({
     children,
     position,
     onReadyToBake,
-    style,
+    outline = false,
     id,
     ...props
 }) => {
@@ -16,10 +16,6 @@ const Sticker = React.memo<StickerProps>(({
 
     const elementRef = useRef<HTMLDivElement>(null);
     const hasBakeCB = onReadyToBake !== undefined;
-    const finalStyle: React.CSSProperties = {
-        backgroundColor: '#ffffff',
-        ...style
-    }
 
     useEffect(() => {
         if (!onReadyToBake || !position) return;
@@ -42,7 +38,7 @@ const Sticker = React.memo<StickerProps>(({
                 $hasBakeCB={hasBakeCB}
                 $position={position}
                 $isMounted={isMounted}
-                style={finalStyle}
+                $outline={outline}
                 {...props}
             >
                 {children}

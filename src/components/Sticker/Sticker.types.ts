@@ -22,4 +22,5 @@ export interface StickerProps extends ComponentProps<'div'> {
     // outline?:
     //     | ({ type: 'static'; shape: string } & StickerOutlineData)
     //     | ({ type: 'custom' } & StickerOutlineData)
+    outline?: boolean;
 }

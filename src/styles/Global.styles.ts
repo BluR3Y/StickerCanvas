@@ -12,5 +12,6 @@ export const GlobalStyles = createGlobalStyle`
         background-color: ${({ theme }) => theme.colors.background};
         color: ${({ theme }) => theme.colors.text};
         -webkit-font-smoothing: antialiased;
+        overflow: hidden;
     }
 `;
